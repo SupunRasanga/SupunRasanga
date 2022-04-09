@@ -1,7 +1,7 @@
 [![MasterHead](https://www.aalpha.net/wp-content/uploads/2020/12/full-stack-development.gif)]
 <h1 align="center">Hi 👋, I'm Supun Rasanga</h1>
 <h3 align="center">A passionate software and web developer in Sri Lanka.</h3>
-<img align="right" alt="Coding" width="400" src="https://simplepassivecashflow.com/wp-content/uploads/2017/11/Work-Fun.gif">
+<img align="right" alt="Coding" width="400" src="https://drive.google.com/file/d/1MbNh7Mz6avp8I17Q8u1HjFmXMpJNJinE/view?usp=sharing">
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=supunrasanga&label=Profile%20views&color=0e75b6&style=flat" alt="supunrasanga" /> </p>
 
