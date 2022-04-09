@@ -1,7 +1,7 @@
 [![MasterHead](https://www.aalpha.net/wp-content/uploads/2020/12/full-stack-development.gif)]
 <h1 align="center">Hi 👋, I'm Supun Rasanga</h1>
 <h3 align="center">A passionate software and web developer in Sri Lanka.</h3>
-<img align="right" alt="Coding" width="400" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhb5k7S3qatzl7Gl4sQbGKAQx0Zz-RExwV7UhiWUCBf5Y0B9h7VX78qUfpV93CKxLXIQcicCqcdjSkzqrrCH63XjZAksv9J9dSYMQ9hl-hY5RSaT3M4HGAytY4PRzOdkJFhRdSpjmAZWf09jfOZTbG69Hhhpb3BqbqCxpPiDoosfmZN1MuRUVYLaUgEPg/s320/result.gif">
+<img align="right" alt="Coding" width="400" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ-4vgHBfZf6eBji8OHWQFAbQn_JHxiGBkOlJLjHLfVMO3yUv2GSlUgmQmOHPXBI6RIzz5YL76y5hGmq7P0POsDc3pxtnatXz0cI7IGlBQfm2P8hs8ebvUY33Vr7xRaHnx2O1dsgmQ43jbMGo84MTyLygAkiD8Xq5l4870Fybcvfnox6kjDUmShLCThQ/s1230/result.gif">
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=supunrasanga&label=Profile%20views&color=0e75b6&style=flat" alt="supunrasanga" /> </p>
 
