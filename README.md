@@ -28,6 +28,81 @@
 <a href="https://www.youtube.com/c/supun rasanga" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="supun rasanga" height="30" width="40" /></a>
 </p>
 
+let rects = [];
+
+function visualize(analyser) {
+  analyser.fftSize = 2048;
+  var bufferLength = analyser.fftSize;
+  var dataArray = new Uint8Array(bufferLength);
+
+  function run() {
+    analyser.fftSize = 2048;
+    var bufferLengthAlt = analyser.frequencyBinCount;
+    var dataArrayAlt = new Uint8Array(bufferLengthAlt);
+
+    function stepp(value) {
+      if (value < 1) {
+        return 0;
+      } else if (value < 30) {
+        return 1;
+      } else if (value < 60) {
+        return 2;
+      } else if (value < 90) {
+        return 3;
+      } else if (value < 120) {
+        return 4;
+      } else if (value < 150) {
+        return 5;
+      } else if (value < 170) {
+        return 6;
+      } else if (value < 200) {
+        return 7;
+      } else {
+        return 8;
+      }
+    }
+
+    var draw = function() {
+      drawVisual = requestAnimationFrame(draw);
+      analyser.getByteFrequencyData(dataArrayAlt);
+
+      for (var j = 0; j < rects.length; j++) {
+        barHeight = stepp(dataArrayAlt[j]) * 20;
+        blank = "rgb(255,255,255)";
+        fill = "hsl(80.2,62.2%," + (9 - stepp(barHeight)) * 10 + "%)";
+        if (stepp(barHeight) < 6 - (j % 7))
+          rects[j].setAttribute("fill", blank);
+        else rects[j].setAttribute("fill", fill);
+      }
+    };
+    draw();
+  }
+  run();
+}
+
+function dothething() {
+  var constraints = { audio: true };
+  navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    source = audioCtx.createMediaStreamSource(stream);
+    var analyser = audioCtx.createAnalyser();
+    source.connect(analyser);
+    visualize(analyser);
+  });
+}
+document.getElementsByClassName("js-yearly-contributions")[0].onclick = () => {
+  console.log("It's on!");
+  dothething();
+};
+const gs = document
+  .getElementsByClassName("js-calendar-graph-svg")[0]
+  .getElementsByTagName("g")[0]
+  .getElementsByTagName("g");
+
+Array.from(gs).forEach(g => {
+  rects = [...rects, ...Array.from(g.getElementsByTagName("rect"))];
+});
+
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> <a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://angular.io" target="_blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/> </a> <a href="https://angular.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg" alt="angularjs" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" alt="dotnet" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.adobe.com/in/products/illustrator.html" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg" alt="illustrator" width="40" height="40"/> </a> <a href="https://www.invisionapp.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/invisionapp/invisionapp-icon.svg" alt="invision" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.oracle.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="oracle" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
 <br>
